@@ -1,4 +1,4 @@
-<center>
+-<center>
 
 ![logo-upt](../media/logo-upt.png)
 
