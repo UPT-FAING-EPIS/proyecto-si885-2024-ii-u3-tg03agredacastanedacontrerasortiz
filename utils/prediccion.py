@@ -39,18 +39,20 @@ try:
             )
         END
         """)
-
         print("Tabla 'predicciones' creada o ya existía.")
-except Exception as e:
-    print(f"Error al crear la tabla 'predicciones': {e}")
 
-with engine.connect() as connection:
-    result = connection.execute("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'predicciones'")
-    if not result.fetchone():
-        print("La tabla 'predicciones' no existe.")
-        raise Exception("La tabla 'predicciones' no se creó correctamente.")
-    else:
-        print("La tabla 'predicciones' existe.")
+    # Verificar si la tabla fue creada correctamente
+    with engine.connect() as connection:
+        result = connection.execute(
+            text("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'predicciones'")
+        )
+        if not result.fetchone():
+            raise Exception("La tabla 'predicciones' no se creó correctamente.")
+        else:
+            print("La tabla 'predicciones' existe y está lista para usarse.")
+
+except Exception as e:
+    print(f"Error: {e}")
 
 # Obtener datos para el modelo
 query = """
