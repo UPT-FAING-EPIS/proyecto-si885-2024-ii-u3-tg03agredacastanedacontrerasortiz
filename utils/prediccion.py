@@ -22,25 +22,27 @@ connection_string = (
 engine = create_engine(f"mssql+pyodbc:///?odbc_connect={connection_string}")
 
 # Crear la tabla 'predicciones' si no existe
-with engine.connect() as connection:
-    connection.exec_driver_sql("""
-    IF NOT EXISTS (
-        SELECT 1 
-        FROM INFORMATION_SCHEMA.TABLES 
-        WHERE TABLE_NAME = 'predicciones'
-    )
-    BEGIN
-        CREATE TABLE predicciones (
-            Ciclo NVARCHAR(50) NOT NULL,
-            Matriculados FLOAT NOT NULL,
-            Aprobados FLOAT NOT NULL,
-            Desaprobados FLOAT NOT NULL,
-            PRIMARY KEY (Ciclo)
+try:
+    with engine.connect() as connection:
+        connection.exec_driver_sql("""
+        IF NOT EXISTS (
+            SELECT 1 
+            FROM INFORMATION_SCHEMA.TABLES 
+            WHERE TABLE_NAME = 'predicciones'
         )
-    END
-    """)
-
-print("Tabla 'predicciones' creada o ya existía.")
+        BEGIN
+            CREATE TABLE predicciones (
+                Ciclo NVARCHAR(50) NOT NULL,
+                Matriculados FLOAT NOT NULL,
+                Aprobados FLOAT NOT NULL,
+                Desaprobados FLOAT NOT NULL,
+                PRIMARY KEY (Ciclo)
+            )
+        END
+        """)
+    print("Tabla 'predicciones' creada o ya existía.")
+except Exception as e:
+    print(f"Error al crear la tabla: {e}")
 
 # Obtener datos para el modelo
 query = """
