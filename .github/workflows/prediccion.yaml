@@ -29,7 +29,8 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pandas sqlalchemy scikit-learn pymssql
+        pip install pyodbc pandas sqlalchemy scikit-learn
+        sudo apt-get install -y unixodbc-dev
 
     - name: Run Python Script
       env:
