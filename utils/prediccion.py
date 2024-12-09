@@ -95,15 +95,16 @@ predicted_desaprobados = float(model_desaprobados.predict(next_cycle)[0])
 
 # Insertar predicciones en la tabla
 with engine.connect() as connection:
-    connection.execute(text("""
-    INSERT INTO predicciones (Ciclo, Matriculados, Aprobados, Desaprobados)
-    VALUES (:ciclo, :matriculados, :aprobados, :desaprobados)
+    result = connection.execute(text(""" 
+        INSERT INTO predicciones (Ciclo, Matriculados, Aprobados, Desaprobados) 
+        VALUES (:ciclo, :matriculados, :aprobados, :desaprobados)
     """), {
         'ciclo': '2023-II',
         'matriculados': predicted_matriculados,
         'aprobados': predicted_aprobados,
         'desaprobados': predicted_desaprobados
     })
+    connection.commit()  # Confirmar la transacción
 
 print("Predicciones para el ciclo 2023-II:")
 print(f"Matriculados: {predicted_matriculados:.2f}")
