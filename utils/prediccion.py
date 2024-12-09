@@ -21,9 +21,8 @@ connection_string = (
 # Crear motor de SQLAlchemy usando pyodbc
 engine = create_engine(f"mssql+pyodbc:///?odbc_connect={connection_string}")
 
-# Crear la tabla 'predicciones' si no existe
 try:
-    with engine.connect() as connection:
+    with engine.begin() as connection:
         connection.exec_driver_sql("""
         IF NOT EXISTS (
             SELECT 1 
@@ -40,9 +39,18 @@ try:
             )
         END
         """)
-    print("Tabla 'predicciones' creada o ya existía.")
+
+        print("Tabla 'predicciones' creada o ya existía.")
 except Exception as e:
-    print(f"Error al crear la tabla: {e}")
+    print(f"Error al crear la tabla 'predicciones': {e}")
+
+with engine.connect() as connection:
+    result = connection.execute("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'predicciones'")
+    if not result.fetchone():
+        print("La tabla 'predicciones' no existe.")
+        raise Exception("La tabla 'predicciones' no se creó correctamente.")
+    else:
+        print("La tabla 'predicciones' existe.")
 
 # Obtener datos para el modelo
 query = """
