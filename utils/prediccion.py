@@ -89,9 +89,10 @@ model_desaprobados = LinearRegression().fit(X_train, y_train_desaprobados)
 
 # Predicciones para el próximo ciclo
 next_cycle = np.array([[2023.5]])
-predicted_matriculados = float(model_matriculados.predict(next_cycle)[0])
-predicted_aprobados = float(model_aprobados.predict(next_cycle)[0])
-predicted_desaprobados = float(model_desaprobados.predict(next_cycle)[0])
+
+predicted_matriculados = int(round(model_matriculados.predict(next_cycle)[0]))
+predicted_aprobados = int(round(model_aprobados.predict(next_cycle)[0]))
+predicted_desaprobados = int(round(model_desaprobados.predict(next_cycle)[0]))
 
 # Insertar predicciones en la tabla
 with engine.connect() as connection:
