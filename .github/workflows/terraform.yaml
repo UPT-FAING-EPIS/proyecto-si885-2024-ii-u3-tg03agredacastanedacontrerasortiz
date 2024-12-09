@@ -1,0 +1,81 @@
+name: 'Terraform'
+on:
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.8
+
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Terraform Init
+        working-directory: ./terraform
+        run: terraform init
+
+      - name: Terraform Plan
+        working-directory: ./terraform
+        run: terraform plan
+
+      - name: Terraform Apply
+        working-directory: ./terraform
+        run: terraform apply -auto-approve
+
+      # INFRACOST
+      - name: Install Infracost
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
+          infracost configure set api_key ico-s7GdBC5T23puW5Ehw6Nrdb56CS8kKpB8
+          infracost configure set currency USD
+
+      - name: Infracost breakdown
+        working-directory: ./terraform
+        run: |
+          infracost breakdown --path . --format json --out-file infracost.json
+
+      - name: Infracost output
+        working-directory: ./terraform
+        run: infracost output --path infracost.json --format table
+
+      # INFRAMAP
+      - name: Install Graphviz
+        run: sudo apt-get install -y graphviz
+
+      - name: Install Inframap
+        run: |
+          curl -Lo inframap-linux-amd64.tar.gz https://github.com/cycloidio/inframap/releases/download/v0.7.0/inframap-linux-amd64.tar.gz
+          tar -xzf inframap-linux-amd64.tar.gz
+          chmod +x inframap-linux-amd64
+          sudo mv inframap-linux-amd64 /usr/local/bin/inframap
+
+      - name: Verify terraform.tfstate
+        working-directory: ./terraform
+        run: ls -l
+
+
+      - name: Generate Inframap
+        working-directory: ./terraform
+        run: |
+          inframap generate terraform.tfstate --printer dot > inframap.dot
+          dot -Tpng inframap.dot -o inframap.png
+
+          
+
+
+
+      - name: Upload Inframap
+        uses: actions/upload-artifact@v3
+        with:
+          name: inframap
+          path: ./terraform/inframap.png
