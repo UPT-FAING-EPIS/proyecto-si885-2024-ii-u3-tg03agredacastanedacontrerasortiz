@@ -1,0 +1,84 @@
+import pandas as pd
+from sqlalchemy import create_engine
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+import numpy as np
+from sqlalchemy.sql import text
+
+
+engine = create_engine(
+    "mssql+pymssql://adminsql:Upt2024!@bi-segunda-unidad.database.windows.net:1433/CICLO_UNIVERSITARIO"
+)
+
+with engine.connect() as connection:
+    connection.exec_driver_sql("""
+    IF NOT EXISTS (
+        SELECT 1 
+        FROM INFORMATION_SCHEMA.TABLES 
+        WHERE TABLE_NAME = 'predicciones'
+    )
+    BEGIN
+        CREATE TABLE predicciones (
+            Ciclo NVARCHAR(50) NOT NULL,
+            Matriculados FLOAT NOT NULL,
+            Aprobados FLOAT NOT NULL,
+            Desaprobados FLOAT NOT NULL,
+            PRIMARY KEY (Ciclo)
+        )
+    END
+    """)
+
+print("Tabla 'predicciones' creada o ya existía.")
+
+query = """
+SELECT Semestre, SUM(Matriculados) AS Matriculados, SUM(Aprobados) AS Aprobados, SUM(Desaprobados) AS Desaprobados
+FROM Cursos 
+GROUP BY Semestre 
+ORDER BY Semestre
+"""
+data = pd.read_sql(query, engine)
+
+data['Semestre_Num'] = data['Semestre'].str.extract(r'(\d+)-').iloc[:, 0].astype(float) + \
+    data['Semestre'].str.contains('II').astype(float) * 0.5
+
+data = data.sort_values('Semestre_Num')
+
+X = data[['Semestre_Num']]
+y_matriculados = data['Matriculados']
+y_aprobados = data['Aprobados']
+y_desaprobados = data['Desaprobados']
+
+
+X_train, X_test, y_train_matriculados, y_test_matriculados = train_test_split(
+    X, y_matriculados, test_size=0.2, random_state=42)
+model_matriculados = LinearRegression().fit(X_train, y_train_matriculados)
+
+X_train, X_test, y_train_aprobados, y_test_aprobados = train_test_split(
+    X, y_aprobados, test_size=0.2, random_state=42)
+model_aprobados = LinearRegression().fit(X_train, y_train_aprobados)
+
+X_train, X_test, y_train_desaprobados, y_test_desaprobados = train_test_split(
+    X, y_desaprobados, test_size=0.2, random_state=42)
+model_desaprobados = LinearRegression().fit(X_train, y_train_desaprobados)
+
+next_cycle = np.array([[2023.5]])
+predicted_matriculados = float(model_matriculados.predict(next_cycle)[0])
+predicted_aprobados = float(model_aprobados.predict(next_cycle)[0])
+predicted_desaprobados = float(model_desaprobados.predict(next_cycle)[0])
+
+with engine.connect() as connection:
+    connection.execute(text("""
+    INSERT INTO predicciones (Ciclo, Matriculados, Aprobados, Desaprobados)
+    VALUES (:ciclo, :matriculados, :aprobados, :desaprobados)
+    """), {
+        'ciclo': '2023-II',
+        'matriculados': predicted_matriculados,
+        'aprobados': predicted_aprobados,
+        'desaprobados': predicted_desaprobados
+    })
+
+
+print("Predicciones para el ciclo 2023-II:")
+print(f"Matriculados: {predicted_matriculados:.2f}")
+print(f"Aprobados: {predicted_aprobados:.2f}")
+print(f"Desaprobados: {predicted_desaprobados:.2f}")
