@@ -35,4 +35,5 @@ jobs:
       env:
         PYTHONUNBUFFERED: 1
       run: |
+        cd utils
         python prediccion.py
