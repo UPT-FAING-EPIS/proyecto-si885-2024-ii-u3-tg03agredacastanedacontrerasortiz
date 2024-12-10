@@ -221,3 +221,58 @@ graph TD
     PublicationServices["Servicios de publicación Power BI"] --> PowerBIService
 
 ```
+
+-Diagrama de Proceso Propuesto
+```mermaid
+sequenceDiagram
+    participant Estudiante as Estudiante (Usuario)
+    participant Sistema as Sistema (PAMIS)
+
+    Estudiante->>Sistema: Accede a la plataforma PAMIS desde su navegador
+    Sistema-->>Estudiante: Muestra la pantalla principal con las secciones de análisis
+
+    Estudiante->>Sistema: Selecciona una sección (por ejemplo, "Análisis de Matrículas")
+    Sistema-->>Estudiante: Carga y muestra los gráficos interactivos relacionados
+
+    Estudiante->>Sistema: Navega por los gráficos y observa los datos
+    Estudiante->>Sistema: Selecciona un gráfico para aplicar filtros
+    Sistema-->>Estudiante: Muestra las opciones de filtros disponibles
+
+    Estudiante->>Sistema: Aplica un filtro (por ejemplo, "Semestre: 2021-I")
+    Sistema-->>Estudiante: Actualiza el gráfico según los filtros seleccionados
+    Sistema-->>Estudiante: Muestra el gráfico actualizado con los datos filtrados
+
+    Estudiante->>Sistema: Aplica un segundo filtro (por ejemplo, "Curso: Auditoría de Sistemas")
+    Sistema-->>Estudiante: Actualiza el gráfico según los filtros seleccionados
+    Sistema-->>Estudiante: Muestra el gráfico actualizado con los datos filtrados
+
+    Estudiante->>Sistema: Selecciona la opción de exportar datos del gráfico
+    Estudiante->>Sistema: Selecciona el formato de exportación (por ejemplo, "XLSX")
+    Sistema-->>Estudiante: Procesa la exportación y genera el archivo
+    Sistema-->>Estudiante: Descarga el archivo al dispositivo del estudiante
+
+```
+-Diagrama de Secuencia de CU01 “Consultar estadísticas académicas”
+```mermaid
+sequenceDiagram
+    actor Estudiante as Estudiante
+    participant Dashboard as Dashboard Principal «Interfaz»
+    participant AnalisisMatriculas as Sección de Análisis de Matrículas «Frontera»
+    participant ControlGraficos as Control de Gráficos «Control»
+
+    Estudiante->>Dashboard: Accede a la plataforma PAMIS
+    Dashboard-->>Estudiante: Muestra las secciones disponibles (Análisis de Matrículas, Desempeño Académico, etc.)
+
+    Estudiante->>Dashboard: Selecciona "Análisis de Matrículas"
+    Dashboard->>AnalisisMatriculas: Cargar gráficos de estadísticas de matrículas
+    AnalisisMatriculas-->>Dashboard: Envía gráficos cargados
+
+    Dashboard-->>Estudiante: Muestra gráficos interactivos
+    Estudiante->>Dashboard: Navega por los gráficos (interacción)
+    Dashboard->>ControlGraficos: Actualiza detalles en los gráficos según la interacción
+    ControlGraficos-->>Dashboard: Envía detalles actualizados
+
+    Dashboard-->>Estudiante: Muestra los detalles específicos
+
+
+```
