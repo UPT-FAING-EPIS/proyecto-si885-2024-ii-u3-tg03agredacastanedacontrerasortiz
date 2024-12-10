@@ -171,4 +171,90 @@ La implementación de PAMIS considera estrictamente la Ley de Protección de Dat
 * La confidencialidad y seguridad de los datos académicos.
 * Cumplimiento de políticas internas de la Universidad Privada de Tacna relacionadas con el uso y almacenamiento de datos estudiantiles
 
+## 5. Desarrollo de la Solución <a id="5"></a>
+### a. Análisis de Factibilidad
 
+#### Factibilidad Social
+El proyecto PAMIS se alinea con los valores y códigos de conducta de la UPT y del entorno social en el que opera. Al proporcionar a los estudiantes una herramienta que les permita tomar decisiones académicas informadas, el proyecto contribuirá al desarrollo académico y personal de los estudiantes, promoviendo una cultura de mejora continua y éxito académico.
+Además, al enfocarse en la personalización de la experiencia educativa, el proyecto responde a las necesidades y expectativas sociales actuales de acceso a la información y toma de decisiones basadas en datos.
+#### Factibilidad Económica
+Se definieron los siguientes costos:
+##### Costos Generales
+<center>
+
+![costos-generales](../media/Costos-Generales.png)
+</center>
+Tabla 01: En Costos Generales se detallan las utilidades con sus cantidades y precios haciendo un total de S/20.00 
+
+##### Costos operativos durante el desarrollo 
+
+<center>
+
+![costos-operativos](../media/costos-operativos.png)
+</center>
+
+Tabla 02: En Costos Operativos se detallan los servicios utilizados durante el desarrollo de PAMIS. Convertido a soles y calculado con los meses de desarrollo nos da un total de S/120.00.
+
+##### Costos del ambiente
+
+<center>
+
+![costos-ambientales](../media/Costos-Ambientales.png)
+</center>
+
+Tabla 03: En Costos del Ambiente se muestran los costos de almacenamiento, servidor web y licencia para la publicación del informe en Power BI por 5 años.
+
+
+##### Costos de personal
+
+<center>
+
+![costos-personal](../media/costos-personal-detalle.png)
+
+Tabla 04: El Costo de Personal detallado muestra los días por mes, las horas por día y el pago por hora y día de todo el personal, finalizando con el total de su pago mensual.
+
+![costos-personal](../media/Costos-Personal.png)
+
+Tabla 05: El Costo de Personal muestra los salarios mensuales y totales de 2 meses para el desarrollo de PAMIS, con un costo total combinado de S/ 10,248.00
+
+</center>
+
+#### Factibilidad Operativa
+* Beneficios del Producto: El proyecto PAMIS proporcionará una plataforma analítica que permite a los estudiantes de la Escuela Profesional de Ingeniería de Sistemas de la Universidad Privada de Tacna acceder a estadísticas detalladas sobre los cursos. Esto mejorará la toma de decisiones académicas, optimizará el rendimiento estudiantil y proporcionará una experiencia educativa más personalizada. Además, al centralizar la información, se facilitará la planificación académica y se reducirá la carga administrativa asociada con la consulta y manejo de datos.
+* Impacto en los Usuarios: Los estudiantes se beneficiarán al poder acceder a datos precisos y personalizados sobre su rendimiento académico. Esto les permitirá tomar decisiones más informadas sobre su trayectoria educativa, lo que puede resultar en un mejor rendimiento académico y una planificación más efectiva.
+#### Factibilidad Técnica
+##### Hardware Disponible
+Equipos de Desarrollo: Se necesitan equipos de desarrollo capaces de ejecutar software de desarrollo web y herramientas de análisis de datos, los materiales previamente mencionados cumplen con las especificaciones mínimas requeridas:
+* Procesador: Intel Core i5 de 4 núcleos, útil para el manejo de tareas de programación, depuración y pruebas.
+* Memoria RAM: De 8 a 16 GB de memoria DDR4 expandible.
+* Almacenamiento: Disco duro sólido (SSD) para el sistema operativo, esto asegura tiempos de carga cada vez más cortos con un óptimo rendimiento general.
+* Tarjeta Gráfica: Se usa la tarjeta gráfica integrada en el procesador Intel, pero también podemos hacer uso de una GPU dedicada como la Nvidia RTX 3050.
+##### Software
+* Aplicaciones y Herramientas de Desarrollo:
+Visual Studio Code: Es el IDE principal para el desarrollo del proyecto, siendo compatible con los sistemas operativos Windows y macOS, ofreciendo extensiones que personalizan el entorno de trabajo.
+* Terraform: Utilizado para la creación y gestión automatizada de la infraestructura en Azure, asegurando consistencia y escalabilidad.
+* Power BI: Herramienta para la creación de dashboards interactivos y visualización de datos conectada directamente al almacén de datos en Azure.
+* Azure Data Factory: Implementado para gestionar pipelines de datos automatizados que integran y transforman información desde las fuentes hacia el almacén de datos.
+* Azure Synapse Analytics: Utilizado como almacén de datos centralizado y para realizar análisis avanzados en grandes volúmenes de datos.
+* Azure DevOps: Plataforma para la gestión de repositorios, pipelines de CI/CD y control de versiones de los artefactos generados.
+* Azure SQL Database: Base de datos transaccional utilizada para la gestión de datos académicos.
+* Navegadores Web: La plataforma debe ser compatible con los navegadores web más conocidos y utilizados tales como Google Chrome, Mozilla Firefox, Microsoft Edge, etc.
+##### Infraestructura en la Nube
+* Grupo de Recursos: Contenedor lógico llamado inteligencia-negocios, que organiza todos los recursos relacionados en la ubicación East US.
+* Azure SQL Server: Servidor principal para alojar la base de datos SQL, donde las credenciales son gestionadas de forma segura mediante Azure Key Vault. (Versión utilizada: SQL Server 12.0.)
+
+* Azure SQL Database: Base de datos llamada CICLO_UNIVERSITARIO, con una capacidad de hasta 32 GB de almacenamiento, una capacidad minima de 0.5 vCores para ahorrar costos cuando está inactiva y cuenta con una auto-pausa que se activa tras 60 minutos de inactividad.
+* Azure Data Factory: Automatización de procesos ETL para cargar y transformar datos desde sistemas de origen hacia Azure SQL Database y Synapse Analytics.
+* Azure Synapse Analytics: Almacén de datos centralizado para integrar y analizar grandes volúmenes de información académica. Optimizado para consultas analíticas rápidas conectadas a Power BI.
+* Terraform: Infraestructura definida como código para garantizar consistencia y despliegue automatizado de recursos en Azure.
+* Azure Key Vault: Gestión segura de credenciales y secretos, como contraseñas y claves de acceso, utilizadas en los diferentes servicios de Azure.
+* Azure DevOps: Pipelines de CI/CD configurados para despliegues automatizados y gestión de versiones de artefactos generados.
+##### Automatización
+La creación y el despliegue de los recursos en Azure se gestionan mediante Terraform, lo que asegura que los entornos de desarrollo, pruebas y producción se configuren de forma uniforme.
+Los pipelines de CI/CD en Azure DevOps integran los artefactos generados, como scripts SQL, configuraciones de Data Factory y dashboards de Power BI, garantizando actualizaciones consistentes y seguras.
+
+##### Infraestructura de Red
+* Conexión a Internet: Una conexión a internet de alta velocidad es esencial para garantizar la disponibilidad y el acceso continuo a los servicios en la nube. Esto es especialmente crítico para la operación de Azure Data Factory y las consultas en tiempo real hacia Azure Synapse Analytics.
+
+#### Factibilidad Ambiental
+Desde una perspectiva ambiental, el proyecto PAMIS tendrá un impacto mínimo en el medio ambiente, ya que se trata de una solución digital que no requiere de infraestructura física adicional. El proyecto contribuirá al compromiso de la UPT con la sostenibilidad al minimizar el uso de papel y otros recursos físicos, promoviendo la digitalización y el acceso en línea a la información académica.
