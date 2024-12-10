@@ -296,7 +296,7 @@ Se definieron los siguientes costos:
 </center>
 
 <center>
-<strong>Tabla 02:</strong> En Costos Operativos se detallan los servicios utilizados durante el desarrollo de PAMIS, haciendo un total de S/7.00 por un mes.
+<strong>Tabla 02:</strong> En Costos Operativos se detallan los servicios utilizados durante el desarrollo de PAMIS. Convertido a soles y calculado con los meses de desarrollo nos da un total de S/120.00.
 </center>
 
 #### 4.2.3. Costos del ambiente
@@ -307,7 +307,7 @@ Se definieron los siguientes costos:
 </center>
 
 <center>
-<strong>Tabla 03:</strong> En Costos del Ambiente  se muestra el costo del servidor en el que estará desplegado el sistema durante 5 años, haciendo un total de S/1,420
+<strong>Tabla 03:</strong> En Costos del Ambiente se muestran los costos de almacenamiento, servidor web y licencia para la publicación del informe en Power BI por 5 años.
 </center>
 
 #### 4.2.4. Costos de personal
@@ -332,7 +332,7 @@ Se definieron los siguientes costos:
 </center>
 
 <center>
-<strong>Tabla 06:</strong> En Costos Totales se resume los subtotales de los costos generales, de personal y del ambiente, llegando a un total acumulado de S/ 11,695.80
+<strong>Tabla 06:</strong> En Costos Totales se resumen los subtotales de los costos generales, de personal, operativos y del ambiente.
 </center>
 <br>
 
@@ -448,7 +448,7 @@ A continuación se detallan los costos anuales luego de la implementación del s
 
 </center>
 <center>
-<strong>Tabla 10:</strong> La Relación Beneficio/Costo (B/C) es de 2,0.
+<strong>Tabla 10:</strong> La Relación Beneficio/Costo (B/C) es de 1.88.
 </center>
 
 <br>
@@ -460,7 +460,7 @@ A continuación se detallan los costos anuales luego de la implementación del s
 
 </center>    
 <center>
-<strong>Tabla 11:</strong> El Valor Actual Neto (VAN) es de S/ 1046,68.
+<strong>Tabla 11:</strong> El Valor Actual Neto (VAN) es de S/ 1983,85
 </center>        
 
 <br>
@@ -472,7 +472,7 @@ A continuación se detallan los costos anuales luego de la implementación del s
 
 </center> 
 <center>
-<strong>Tabla 12:</strong> La Tasa Interna de Retorno (TIR) es del 6,9%
+<strong>Tabla 12:</strong> La Tasa Interna de Retorno (TIR) es del 9.10%
 </center>
 
 
@@ -490,8 +490,10 @@ En el ámbito social, PAMIS tiene un impacto positivo al responder a las necesid
 
 Desde la perspectiva ambiental, PAMIS también tiene un enfoque responsable y sostenible. Al ser una solución digital, no requiere de infraestructura física adicional, lo que minimiza su huella ecológica. La plataforma contribuye a reducir el uso de papel y otros recursos materiales dentro de la universidad, alineándose con el compromiso de la UPT hacia la sostenibilidad y la preservación del medio ambiente. Al promover la digitalización y el acceso en línea a la información académica, PAMIS se integra de manera efectiva en los esfuerzos por hacer de la educación un proceso más respetuoso con el entorno.
 
-El análisis detallado de los criterios de inversión en soles peruanos confirma la viabilidad financiera del proyecto. En primer lugar, la Relación Beneficio/Costo (B/C) de 2.0 significa que, por cada sol invertido, el proyecto generará 2.0 soles en beneficios. Esto es una clara señal de que el proyecto es rentable, ya que un valor superior a 1 en la relación B/C indica que los ingresos generados por el proyecto no solo cubrirán los costos de inversión, sino que también producirán una ganancia considerable. Esto es particularmente importante, ya que asegura que el proyecto tiene un retorno suficiente para justificar la inversión, aportando un beneficio neto significativo a la institución o entidad que lo lleve a cabo.
+El análisis financiero confirma que el proyecto es viable. La Relación Beneficio/Costo (B/C) de 1.88 indica que por cada unidad monetaria invertida se generan 1.88 unidades de beneficio, reflejando una buena rentabilidad, ya que un valor superior a 1 indica viabilidad.
 
-Además, el Valor Actual Neto (VAN) de S/ 1,046.68 refuerza aún más esta conclusión. El VAN representa el valor presente de los ingresos futuros que el proyecto generará, descontados por la tasa de interés del 3%. Un VAN positivo, como es el caso aquí, significa que el proyecto generará un excedente de S/ 1,046.68 por encima de los costos iniciales, lo que indica que los flujos de caja futuros tienen un valor actual mayor que la inversión necesaria. Esto sugiere que el proyecto no solo es capaz de recuperar su inversión, sino que también producirá un valor adicional que beneficiará a los involucrados, demostrando que es una decisión financiera acertada.
+El Valor Actual Neto (VAN) de S/ 1,983.85 demuestra que los ingresos futuros superan los costos iniciales en esa cantidad, lo que justifica la inversión. Un VAN positivo reafirma la rentabilidad del proyecto.
 
-Por último, la Tasa Interna de Retorno (TIR) del 6.9% es un indicador clave de la rentabilidad del proyecto. La TIR mide la tasa de retorno que el proyecto generará sobre la inversión inicial. En este caso, una TIR del 6.9% supera considerablemente la tasa de interés utilizada para descontar los flujos de caja, que es del 3%. Esto significa que el proyecto es capaz de generar un retorno mayor que el costo del capital, lo cual es crucial para su éxito. Una TIR mayor que la tasa de interés asegura que la inversión no solo será recuperada, sino que también proporcionará una rentabilidad atractiva.
+La Tasa Interna de Retorno (TIR) de 9.10% es significativamente mayor que la tasa de interés del 3%, lo que confirma que el proyecto no solo recuperará la inversión, sino que también generará un retorno adicional atractivo.
+
+En conjunto, estos indicadores señalan que el proyecto es financieramente sólido y representa una inversión recomendable.
