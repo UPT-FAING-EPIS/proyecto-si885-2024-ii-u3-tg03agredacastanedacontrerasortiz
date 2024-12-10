@@ -33,3 +33,59 @@ El propósito de PAMIS es proporcionar una plataforma tecnológica que permita a
 -  [Consolidado Semestre 2022 - I](https://docs.google.com/spreadsheets/d/1rwH7N_DOPicpMzaNN9rf5wD1CHzeQA0E/edit?usp=sharing&ouid=105683032286356296046&rtpof=true&sd=true)
 
 -  [Consolidado Semestre 2022 - II](https://docs.google.com/spreadsheets/d/10kJhI5DXXkWpJ0_mLp-LQxszpHnUWk9N/edit?usp=sharing&ouid=105683032286356296046&rtpof=true&sd=true)
+
+- Diagrama de clase
+
+```mermaid
+classDiagram
+    class Curso {
+        +String codigoCurso
+        +String nombreCurso
+        +String semestre
+        +int totalMatriculados
+        +int totalAprobados
+        +int totalDesaprobados
+        +int totalRetiros
+        +int totalAbandonos
+        +int totalLlevados
+        +int cantidadConvalidados
+        +float notaMinima
+        +float notaMaxima
+        +float promedioNotas
+        +float desviacionEstandarNotas
+        +obtenerEstadisticas(): Map<String, Object>
+        +calcularPromedioNotas(): float
+        +calcularDesviacionEstandar(): float
+        +actualizarEstadisticas(matriculados, aprobados, desaprobados, retiros): void
+        +aplicarFiltroPorSemestre(semestre: String): List<Curso>
+        +exportarReporte(formato: String): File
+    }
+```
+
+- Diagrama Contenedor
+```mermaid
+graph TD
+    subgraph Aplicación_Web
+        A_Interfaz[Interfaz de Usuario]
+    end
+
+    subgraph Servidor_Backends
+        B1[Gestiona la lógica de negocio]
+        B2[Procesa las solicitudes del frontend]
+    end
+
+    subgraph Terraform
+        C1[Automatiza la configuración de infraestructura en Azure]
+    end
+
+    subgraph Azure
+        E[Base de datos]
+    end
+
+    A_Interfaz -->|Solicita datos| B1
+    B1 -->|Consulta/Actualiza datos académicos| E
+    B2 -->|Procesa solicitudes| A_Interfaz
+    B1 -->|Gestiona y provisiona| C1
+    C1 -->|Configura infraestructura| E
+
+```
