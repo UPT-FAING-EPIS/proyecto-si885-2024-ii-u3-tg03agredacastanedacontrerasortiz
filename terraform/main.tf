@@ -42,6 +42,6 @@ resource "azurerm_app_service" "web_app" {
   app_service_plan_id = azurerm_service_plan.app_service_plan.id
 
   site_config {
-    linux_fx_version = "DOCKER|alvarocontreras13/uploadcsv-app:v1"
+    linux_fx_version = "DOCKER|alvarocontreras13/uploadcsv-app:v2"
   }
 }
