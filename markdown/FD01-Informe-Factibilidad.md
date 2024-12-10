@@ -30,7 +30,7 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 
 **Plataforma de análisis de datos de matriculados en la carrera de Ingeniería de Sistemas para la Universidad Privada de Tacna - PAMIS**
 
-**Versión 2.0**
+**Versión 3.0**
 
 ## **Control de Versiones**
 
@@ -38,6 +38,7 @@ Docente: *Mag. Patrick Cuadros Quiroga*
 | :-----: | --------- | ------------ | ------------ | ---------- | ---------------- |
 | 1.0     | JCC       | ACL          | JAR          | 27/08/2024 | Versión Original |
 | 2.0     | XOF       | JAR          | IME          | 15/11/2024 | Versión Original |
+| 3.0     | JAR       | XOF          | JCC          | 15/11/2024 | Versión Original |
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
 
@@ -246,9 +247,10 @@ Se usará para crear informes, gráficos interactivos y el dashboard principal; 
 
   - *Power BI:* Herramienta es para la creación de dashboards y visualizaciones de datos interactivos, además de ser poderosa para los análisis de datos.
 
-  - *Azure SQL Database:* Base de datos transaccional utilizada para la gestión de datos académicos.
+  - *SQL Database:* Base de datos transaccional utilizada para la gestión de datos académicos.
 
-  
+  - *Docker:* Plataforma empleada para la creación y gestión de contenedores, facilitando la portabilidad, la escalabilidad y el despliegue consistente de las aplicaciones.
+
 - **Navegadores Web:** La plataforma debe ser compatible con los navegadores web más conocidos y utilizados tales como Google Chrome, Mozilla Firefox, Microsoft Edge, etc.
 
 **Infraestructura en la Nube**
@@ -257,7 +259,9 @@ Se usará para crear informes, gráficos interactivos y el dashboard principal; 
 
 - **Azure SQL Server:** Servidor principal para alojar la base de datos SQL, donde las credenciales son gestionadas de forma segura mediante Azure Key Vault. (Versión utilizada: SQL Server 12.0.)
 
-- **Azure SQL Database:** Base de datos llamada CICLO_UNIVERSITARIO, con una capacidad de hasta 32 GB de almacenamiento, una capacidad minima de 0.5 vCores para ahorrar costos cuando está inactiva y cuenta con una auto-pausa que se activa tras 60 minutos de inactividad.
+- **Azure SQL Database:** Base de datos llamada CICLO_UNIVERSITARIO, con una capacidad de hasta 32 GB de almacenamiento, una capacidad mínima de 0.5 vCores para ahorrar costos cuando está inactiva y cuenta con una auto-pausa que se activa tras 60 minutos de inactividad.
+
+- **Azure App Service:** Servicio utilizado para alojar y ejecutar aplicaciones web en un entorno escalable y administrado. 
 
 - **Terraform:** Infraestructura definida como código para garantizar consistencia y despliegue automatizado de recursos en Azure.
 
