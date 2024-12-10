@@ -222,3 +222,59 @@ Desarrollar una plataforma de análisis de datos de matriculados en la carrera d
 | RF-05   | Exportación de Reportes                  | La plataforma debe incluir funcionalidades para que los usuarios puedan exportar reportes en formatos PDF y Excel, permitiendo un análisis posterior fuera de la plataforma. |
 | RF-06   | Filtros y Segmentación                   | La plataforma debe permitir que los usuarios apliquen filtros y segmenten los datos en función de criterios específicos, como curso, semestre, año académico y docente. |
 | RF-07   | Generación de Recomendaciones Académicas | La plataforma debe ofrecer recomendaciones y análisis predictivos basados en datos históricos, apoyando a los estudiantes en la toma de decisiones informadas sobre su trayectoria académica. |
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+# Requerimientos No Funcionales
+
+| Código  | Requerimiento                        | Descripción                                                                                                                                      |
+|---------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| RF-01   | Usabilidad                           | La interfaz de usuario debe ser intuitiva y accesible, permitiendo que usuarios con distintos niveles de experiencia técnica puedan navegar, visualizar datos y generar reportes sin dificultades. |
+| RF-02   | Disponibilidad y Fiabilidad          | La plataforma debe estar disponible el 99.5% del tiempo, excluyendo períodos de mantenimiento programado.                                        |
+| RF-03   | Seguridad de Datos                   | La plataforma debe cumplir con la Ley de Protección de Datos Personales en Perú, asegurando la confidencialidad y privacidad de los datos académicos y personales de los estudiantes. |
+| RF-04   | Compatibilidad                       | La plataforma debe ser accesible desde entornos de escritorio, funcionando en sistemas operativos Windows y macOS, y ser compatible con los navegadores más utilizados (Google Chrome, Mozilla Firefox, Microsoft Edge). |
+| RF-05   | Recuperación Rápida ante Fallos e Interrupciones | La plataforma debe de recuperarse de manera muy rápida frente a fallos e interrupciones.                                                       |
+| RF-06   | Interactividad y Visualización de Datos | La plataforma debe permitir una visualización precisa y flexible, con filtros personalizables y segmentación de datos aplicable en un 95% de las consultas realizadas. |
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+---
+
+
+# Restricciones
+
+- **Servicios Educativos Directos:**  
+  La plataforma PAMIS no brindará servicios educativos directos ni consultas académicas personalizadas. Su propósito se limita únicamente al análisis de datos académicos.
+
+- **Gestión de Otros Programas Académicos:**  
+  PAMIS estará enfocada exclusivamente en la carrera de Ingeniería de Sistemas, sin incluir la gestión de datos relacionados con otros programas académicos de la Universidad Privada de Tacna.
+
+- **Soporte Legal o Administrativo:**  
+  La plataforma no incluirá asistencia legal o el soporte administrativo fuera del análisis de datos académicos, dejando fuera cualquier tipo de gestión administrativa.
+
+- **Limitaciones de Recursos:**  
+  Debido a que la plataforma se desarrollará en PowerBI, todo se realizará en base a las funcionalidades disponibles en esta herramienta. Cualquier personalización fuera de las capacidades estándar de PowerBI podría requerir un desarrollo adicional, lo cual podría estar fuera del alcance del proyecto.
+
+- **Accesibilidad en Dispositivos Móviles:**  
+  La plataforma PAMIS estará diseñada para un entorno de escritorio a través de PowerBI, lo que podría limitar su accesibilidad y usabilidad en dispositivos móviles.
+
+---
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+# Supuestos
+
+- **Enfoque en la Ingeniería de Sistemas:**  
+  PAMIS se limitará exclusivamente al análisis académico de la carrera de Ingeniería de Sistemas, excluyendo la gestión de otros programas académicos de la universidad.
+
+- **Sin soporte móvil:**  
+  La plataforma no estará optimizada para dispositivos móviles, funcionando únicamente en entornos de escritorio a través de Power BI.
+
+- **Uso limitado a análisis de datos:**  
+  PAMIS no ofrecerá servicios educativos directos ni consultas académicas personalizadas. Su propósito es únicamente el análisis y la visualización de datos académicos relevantes.
+
+- **Dependencia de Power BI:**  
+  Todas las funcionalidades se desarrollarán con las herramientas disponibles en Power BI. Cualquier personalización adicional fuera de sus capacidades estándar podría requerir un alcance adicional en el proyecto.
+
+- **Mantenimiento periódico:**  
+  La plataforma estará sujeta a mantenimientos regulares para garantizar la precisión de los datos y la funcionalidad del sistema.
