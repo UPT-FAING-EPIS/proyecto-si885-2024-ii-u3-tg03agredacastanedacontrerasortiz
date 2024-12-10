@@ -274,5 +274,59 @@ sequenceDiagram
 
     Dashboard-->>Estudiante: Muestra los detalles específicos
 
+```
+
+-Diagrama de Secuencia de CU02 “Aplicar filtros a los gráficos”
+```mermaid
+sequenceDiagram
+    actor Estudiante as Estudiante
+    participant GraficoInteractivo as Gráfico Interactivo «Frontera»
+    participant ControlFiltros as Control de Filtros «Control»
+    participant ControlGraficos as Control de Gráficos «Control»
+    participant DatosEstadisticos as Datos Estadísticos «Entidad»
+
+    Estudiante->>GraficoInteractivo: Selecciona un gráfico dentro de una sección
+    GraficoInteractivo-->>Estudiante: Muestra gráfico con datos generales y opciones de filtros disponibles
+
+    Estudiante->>GraficoInteractivo: Elige un filtro (e.g., Semestre: 2021-I)
+    GraficoInteractivo->>ControlFiltros: Solicita datos filtrados por semestre
+    ControlFiltros->>DatosEstadisticos: Solicita datos correspondientes al filtro
+    DatosEstadisticos-->>ControlFiltros: Devuelve datos correspondientes al filtro
+    ControlFiltros-->>GraficoInteractivo: Actualiza gráfico con datos filtrados
+    GraficoInteractivo-->>Estudiante: Actualiza gráfico mostrado
+
+    Estudiante->>GraficoInteractivo: Selecciona un segundo filtro (e.g., Curso: Auditoría de Sistemas)
+    GraficoInteractivo->>ControlFiltros: Solicita datos combinados (Semestre + Curso)
+    ControlFiltros->>DatosEstadisticos: Solicita datos combinados
+    DatosEstadisticos-->>ControlFiltros: Devuelve datos combinados
+    ControlFiltros-->>GraficoInteractivo: Actualiza gráfico con datos combinados
+    GraficoInteractivo-->>Estudiante: Actualiza gráfico interactivo mostrado
+
+```
+-Diagrama de Secuencia de CU03 “Exportar reportes”
+```mermaid
+sequenceDiagram
+    actor Estudiante as Estudiante
+    participant GraficoInteractivo as Gráfico Interactivo «Frontera»
+    participant ControlFiltros as Control de Filtros «Control»
+    participant ControlGraficos as Control de Gráficos «Control»
+    participant DatosEstadisticos as Datos Estadísticos «Entidad»
+
+    Estudiante->>GraficoInteractivo: Selecciona un gráfico dentro de una sección
+    GraficoInteractivo-->>Estudiante: Muestra gráfico con datos generales y opciones de filtros disponibles
+
+    Estudiante->>GraficoInteractivo: Elige un filtro (e.g., Semestre: 2021-I)
+    GraficoInteractivo->>ControlFiltros: Solicita datos filtrados por semestre
+    ControlFiltros->>DatosEstadisticos: Devuelve datos correspondientes al filtro
+    DatosEstadisticos-->>ControlFiltros: Devuelve datos correspondientes al filtro
+    ControlFiltros-->>GraficoInteractivo: Actualiza gráfico con datos filtrados
+    GraficoInteractivo-->>Estudiante: Actualiza gráfico mostrado
+
+    Estudiante->>GraficoInteractivo: Selecciona un segundo filtro (e.g., Curso: Auditoría de Sistemas)
+    GraficoInteractivo->>ControlFiltros: Solicita datos combinados (Semestre + Curso)
+    ControlFiltros->>DatosEstadisticos: Solicita datos combinados
+    DatosEstadisticos-->>ControlFiltros: Devuelve datos combinados
+    ControlFiltros-->>GraficoInteractivo: Actualiza gráfico con datos combinados
+    GraficoInteractivo-->>Estudiante: Actualiza gráfico interactivo mostrado
 
 ```
