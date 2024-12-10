@@ -113,3 +113,43 @@ sequenceDiagram
     Sistema-->>Estudiante: Permite la interacción con los gráficos (detalles al pasar el cursor o hacer clic)
 
 ```
+
+-Diagrama de Actividades CU-02 “Aplicar filtros a los gráficos”
+```mermaid
+sequenceDiagram
+    participant Estudiante as Estudiante (Actor)
+    participant Sistema as Sistema (PAMIS)
+
+    Estudiante->>Sistema: Selecciona un gráfico dentro de una sección de análisis
+    Sistema-->>Estudiante: Muestra el gráfico con datos generales y las opciones de filtros disponibles
+
+    Estudiante->>Sistema: Elige un filtro (e.g., "Semestre: 2021-I")
+    Sistema-->>Sistema: Actualiza el gráfico para reflejar los datos correspondientes al filtro seleccionado
+    Sistema-->>Estudiante: Muestra el gráfico actualizado
+
+    Estudiante->>Sistema: Elige un segundo filtro (e.g., "Curso: Auditoría de Sistemas")
+    Sistema-->>Sistema: Combina los filtros aplicados y actualiza el gráfico de manera interactiva
+    Sistema-->>Estudiante: Muestra el gráfico interactivo actualizado
+
+```
+-Diagrama de Actividades CU-03 “Exportar reportes”
+```mermaid
+sequenceDiagram
+    participant Estudiante as Estudiante (Actor)
+    participant Sistema as Sistema (PAMIS)
+
+    Estudiante->>Sistema: Selecciona un gráfico dentro de una sección
+    Sistema-->>Estudiante: Muestra el gráfico con la opción "Exportar datos"
+
+    Estudiante->>Sistema: Hace clic en la opción "Exportar datos"
+    Sistema-->>Estudiante: Muestra un cuadro de diálogo con las opciones de exportación ("Datos resumidos" o "Datos con diseño actual")
+
+    Estudiante->>Sistema: Selecciona "Datos resumidos"
+    Estudiante->>Sistema: Elige un formato (por ejemplo, "XLSX")
+    Sistema-->>Sistema: Habilita los formatos disponibles para exportar (XLSX y CSV)
+
+    Estudiante->>Sistema: Hace clic en el botón de descarga
+    Sistema-->>Estudiante: Procesa la exportación y genera el archivo en el formato seleccionado
+    Sistema-->>Estudiante: Descarga el archivo al dispositivo del estudiante
+
+```
