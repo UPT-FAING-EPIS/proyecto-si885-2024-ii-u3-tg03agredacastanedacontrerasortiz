@@ -330,3 +330,46 @@ sequenceDiagram
     GraficoInteractivo-->>Estudiante: Actualiza gráfico interactivo mostrado
 
 ```
+
+-Diagrama ER
+```mermaid
+erDiagram
+    Cursos {
+        VARCHAR NombreCurso
+        INT Matriculados
+        INT Aprobados
+        INT Desaprobados
+        INT Retiros
+        INT Abandonos
+        INT TotalLlevados
+        INT CantidadConvalidados
+        FLOAT NotaMinima
+        FLOAT NotaMaxima
+        FLOAT Promedio
+        FLOAT DesviacionEstandar
+        NVARCHAR(50) CodigoCurso
+        NVARCHAR(50) Semestre
+    }
+
+```
+-Organigrama
+```mermaid
+graph TD
+    A[Consejo de Facultad] --> B[Decanato]
+    B --> C[Comisión de Planificación]
+    B --> D[Comisión Académico Curricular y de Evaluación Docente]
+    B --> E[Comisión de Aseguramiento de la Calidad]
+    B --> F[Secretaría Académica Administrativa]
+    
+    F --> G[Escuela Profesional de Ingeniería Electrónica]
+    F --> H[Escuela Profesional de Ingeniería de Sistemas]
+    F --> I[Escuela Profesional de Ingeniería Civil]
+    F --> J[Escuela Profesional de Ingeniería Agroindustrial]
+    F --> K[Escuela Profesional de Ingeniería Ambiental]
+    F --> L[Escuela Profesional de Ingeniería Industrial]
+    F --> M[Unidad de Postgrado y/o Segunda Especialidad]
+    F --> N[Unidad de Investigación]
+    F --> O[Unidad de Responsabilidad Social Universitaria]
+    F --> P[Centro de Producción de Bienes y Prestación de Servicios]
+
+```
