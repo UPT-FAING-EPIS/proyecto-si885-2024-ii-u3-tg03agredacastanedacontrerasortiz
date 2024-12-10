@@ -410,3 +410,32 @@ Estos usuarios tienen acceso completo al sistema, serán responsables de cargar,
 | Adquisición de Tecnología | Licencias de Power BI, Infraestructura en la nube configurada para la plataforma.     |
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+## II. Presupuesto
+
+### Planteamiento de Aplicación del Presupuesto
+
+#### Servicios
+
+| Servicio            | Duración (Años) | Precio Anual (S/) | Total (S/) |
+|---------------------|----------------|-------------------|------------|
+| Servidor en la Nube | 5              | 200.00            | 1,000.00   |
+| Azure SQL Database  | 5              | 84.00             | 420.00     |
+
+#### Material
+
+| Material            | Duración (mes) | Precio (Mensual S/) | Total (S/) |
+|---------------------|----------------|---------------------|------------|
+| Azure SQL Database  | 1              | 7.00                | 7.00       |
+
+---
+
+### Presupuesto
+
+| Tipos de Costo       | Subtotal (S/) |
+|----------------------|---------------|
+| Costos Generales     | 20.00         |
+| Costos Operativos    | 7.00          |
+| Costos de Personal   | 10,248.80     |
+| Costos del Ambiente  | 1,420.00      |
+| **TOTAL**            | **11,695.80** |
