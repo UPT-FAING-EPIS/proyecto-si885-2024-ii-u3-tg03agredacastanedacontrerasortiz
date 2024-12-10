@@ -278,3 +278,49 @@ Desarrollar una plataforma de análisis de datos de matriculados en la carrera d
 
 - **Mantenimiento periódico:**  
   La plataforma estará sujeta a mantenimientos regulares para garantizar la precisión de los datos y la funcionalidad del sistema.
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+
+  # Resultados Esperados
+
+a. **Optimización del Acceso a Datos Académicos:**  
+   PAMIS digitaliza y centraliza la información académica clave, permitiendo una visualización eficiente y personalizada de datos de matrícula, rendimiento y estadísticas clave.
+
+b. **Identificación de Áreas de Mejora:**  
+   Con la implementación de dashboards interactivos, se facilitan análisis detallados que destacan áreas críticas, ayudando a docentes y administradores a enfocar esfuerzos en estrategias de mejora académica.
+
+c. **Eficiencia en la Toma de Decisiones:**  
+   La plataforma proporciona reportes precisos y análisis predictivos, apoyando tanto a estudiantes como a docentes en la planificación académica y la toma de decisiones basadas en datos.
+
+d. **Incremento en la Calidad Educativa:**  
+   El uso de herramientas avanzadas y análisis de tendencias académicas fomenta una mejora continua en la calidad de la educación proporcionada.
+
+e. **Reducción de la Deserción:**  
+   El análisis de rendimiento individual y colectivo permitirá identificar factores de riesgo y proponer intervenciones tempranas para mejorar la retención estudiantil.
+
+---
+
+# Metodología de Implementación
+
+Según el RUP, se trabajará en diferentes fases como:
+
+a. **Inicio:**  
+   La fase de inicio se enfoca en establecer el fundamento del proyecto, definir su alcance y obtener la aprobación de los interesados clave. Esta fase asegura que todos los participantes comprendan y acuerden los objetivos y las metas del proyecto.
+
+b. **Concepción:**  
+   En esta fase, se detallan los requisitos del sistema y se desarrolla una visión clara del proyecto. La concepción proporciona una comprensión sólida de lo que se necesita construir y cómo se alineará con los objetivos del negocio.
+
+c. **Elaboración:**  
+   La fase de elaboración se centra en analizar los requisitos más detalladamente y diseñar la arquitectura del sistema. Esta fase reduce los riesgos técnicos al crear prototipos y validar la arquitectura.
+
+d. **Construcción:**  
+   En la fase de construcción, el sistema se desarrolla y prueba de manera iterativa. El objetivo es construir el software según la arquitectura definida y asegurar que cumpla con los requisitos especificados.
+
+e. **Transición:**  
+   La fase de transición se centra en la entrega del sistema a los usuarios finales. Esto incluye la implementación en el entorno de producción, capacitación de los usuarios y la realización de pruebas finales para asegurar que el sistema esté listo para su uso.
+
+f. **Adquirir Tecnología:**  
+   Esta fase se enfoca en la adquisición e implementación de la infraestructura necesaria para soportar la plataforma desarrollada.
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
