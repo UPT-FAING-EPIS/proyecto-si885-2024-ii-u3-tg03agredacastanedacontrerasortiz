@@ -258,3 +258,9 @@ Los pipelines de CI/CD en Azure DevOps integran los artefactos generados, como s
 
 #### Factibilidad Ambiental
 Desde una perspectiva ambiental, el proyecto PAMIS tendrá un impacto mínimo en el medio ambiente, ya que se trata de una solución digital que no requiere de infraestructura física adicional. El proyecto contribuirá al compromiso de la UPT con la sostenibilidad al minimizar el uso de papel y otros recursos físicos, promoviendo la digitalización y el acceso en línea a la información académica.
+
+### b. Tecnología de Desarrollo 
+![tecnologia-desarrollo](../media/TecnoDesarrollo.png)
+
+### c. Metodología de Implementación
+Para la implementación de la plataforma de análisis de datos PAMIS se utilizará la metodología ágil Scrum, que permite un desarrollo iterativo, incremental y colaborativo. Facilitando la adaptación a los requerimientos del cliente y la entrega de productos funcionales en ciclos cortos.
