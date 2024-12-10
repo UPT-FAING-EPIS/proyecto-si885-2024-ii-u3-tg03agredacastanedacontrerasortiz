@@ -122,3 +122,26 @@ Soporte Tecnológico:
 * Soporte Legal o Administrativo: La plataforma no ofrecerá asistencia legal ni soporte administrativo más allá del análisis de datos académicos.
 * Soporte para Dispositivos Móviles: PAMIS no ofrecerá soporte ni optimización para dispositivos móviles, enfocándose únicamente en entornos de escritorio a través de PowerBI.
 
+
+
+## 3. Objetivos <a id="3"></a>
+
+### Objetivo general
+Desarrollar una plataforma de análisis de datos de matriculados en la carrera de ingeniería de sistemas para la universidad privada de Tacna que permita a sus estudiantes y docentes, acceder a estadísticas detalladas sobre los cursos, con el fin de mejorar la toma de decisiones académicas y optimizar su rendimiento.
+### Objetivos Específicos
+#### Análisis de Matrículas:
+* Objetivo: Proporcionar una visión clara sobre las tasas de matriculación y su evolución a lo largo del tiempo para identificar tendencias y patrones de inscripción.
+* Meta: Facilitar la identificación de picos o caídas en las matrículas, ayudando en la planificación de recursos y estrategias de captación.
+#### Desempeño Académico por Curso:
+* Objetivo: Evaluar el rendimiento académico en cada curso a través de la visualización de tasas de aprobación y calificaciones.
+* Meta: Ofrecer a los estudiantes una comprensión detallada de su desempeño y motivarlos a mejorar en áreas específicas.
+#### Análisis Comparativo entre Cohortes:
+* Objetivo: Realizar comparaciones del rendimiento académico entre diferentes generaciones de estudiantes para identificar cambios y tendencias a lo largo del tiempo.
+* Meta: Proporcionar información que ayude a entender cómo diferentes cohortes responden a los planes de estudio y a las metodologías de enseñanza.
+#### Identificación de Áreas Críticas:
+* Objetivo: Detectar cursos o áreas académicas con un alto índice de desaprobación para implementar estrategias de mejora.
+* Meta: Informar a la administración y a los docentes sobre los cursos que requieren atención adicional, promoviendo acciones correctivas oportunas.
+#### Análisis de Matriculados por Docente:
+* Objetivo: Evaluar el rendimiento de los estudiantes en relación con los docentes a través de la tasa de aprobación y la probabilidad de éxito.
+* Meta: Proporcionar información valiosa sobre la efectividad docente y permitir ajustes en la asignación de cursos, buscando mejorar la experiencia académica.
+
