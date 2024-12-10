@@ -194,3 +194,30 @@ Estudiante --> ExportarReportes
 Estudiante --> AplicarFiltros
 Estudiante --> ConsultarEstadisticas
 ```
+
+-Diagrama de componentes
+```mermaid
+graph TD
+    Database["Base de Datos (CICLO_UNIVERSITARIO)"] --> PowerBI["Power BI"]
+    PowerBI --> Model["Modelo de Datos"]
+    Model --> Transformations["Transformaciones DAX"]
+    Transformations --> Metrics["Páginas de Presentación"]
+    Metrics -->|Proveen datos base| Tables["Gráficos y Tablas «UI»"]
+    Metrics --> Comparative["Análisis Comparativo"]
+    Metrics --> Approval["Índice de Desaprobación"]
+    Metrics --> Performance["Desempeño Académico"]
+    Metrics --> Enrollment["Análisis Matrícula"]
+    Users["Usuarios"] -->|Interacción| Tables
+
+```
+
+-Diagrama de Paquetes
+```mermaid
+graph TD
+    subgraph PAMIS
+        AzureDB["Base de Datos Azure"] --> PowerBIService["Power BI Service"]
+        Dashboards --> PowerBIService
+    end
+    PublicationServices["Servicios de publicación Power BI"] --> PowerBIService
+
+```
