@@ -324,3 +324,89 @@ f. **Adquirir Tecnología:**
    Esta fase se enfoca en la adquisición e implementación de la infraestructura necesaria para soportar la plataforma desarrollada.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+# Actores Clave
+
+## Administrador General:
+El Administrador General tiene acceso completo a toda la información del sistema. Es responsable de la configuración inicial de la plataforma, gestión de permisos y mantenimiento general. También supervisa el desempeño de los módulos de análisis y garantiza la precisión de los datos visualizados.
+
+## Docentes:
+Los docentes pueden acceder a estadísticas académicas específicas de sus cursos y estudiantes. Tienen la capacidad de explorar patrones de rendimiento y generar reportes personalizados que les permitan identificar áreas de mejora en sus clases.
+
+## Estudiantes:
+Los estudiantes son los principales beneficiarios del sistema. Pueden visualizar su rendimiento académico, comparar sus resultados con los de sus cohortes y recibir recomendaciones basadas en análisis predictivos para optimizar su planificación académica.
+
+---
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+# Papel y Responsabilidades del Personal
+
+## Administrador General:
+El Administrador General tiene acceso a toda la información del sistema y es responsable de configurar y gestionar permisos a otros usuarios, supervisar la integridad y seguridad de los datos en la plataforma.
+
+## Administradores Académicos:
+Estos usuarios tienen acceso completo al sistema, serán responsables de cargar, actualizar y verificar los datos de matrícula y rendimiento académico en la plataforma.
+
+---
+
+# Plan de Monitoreo y Evaluación
+
+## Progreso del Proyecto:
+- Tareas completadas vs. cronograma.
+- Presupuesto utilizado.
+
+## Resultados Esperados:
+- Adopciones exitosas.
+- Satisfacción de adoptantes.
+- Donativos recibidos.
+
+## Calidad del Proyecto:
+- Errores detectados.
+- Cumplimiento de requisitos.
+
+## Riesgos y Problemas:
+- Riesgos mitigados.
+- Problemas resueltos.
+
+---
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+# Cronograma del Proyecto
+
+| Fase                      | Tarea                                       | Duración (días) | Inicio       | Fin          |
+|---------------------------|---------------------------------------------|----------------|--------------|--------------|
+| Gestión de Proyectos      | Inicio                                     | 5              | 1/10/2024    | 5/10/2024    |
+| Gestión de Proyectos      | Registro de Interesados                    | 3              | 6/10/2024    | 8/10/2024    |
+| Gestión de Proyectos      | Plan de Proyecto                          | 3              | 9/10/2024    | 11/10/2024   |
+| Gestión de Proyectos      | Informe de Estado del Proyecto             | 2              | 12/10/2024   | 13/10/2024   |
+| Gestión de Proyectos      | Reunión de Coordinación Semanal            | 1              | 14/10/2024   | 14/10/2024   |
+| Gestión de Proyectos      | Cierre del Proyecto                        | 1              | 15/10/2024   | 15/10/2024   |
+| Fase de Concepción        | Especificación de Requerimientos del Software | 4            | 16/10/2024   | 20/10/2024   |
+| Fase de Concepción        | Documento Visión                           | 3              | 21/10/2024   | 24/10/2024   |
+| Fase de Elaboración       | Modelo de Casos de Uso                     | 3              | 25/10/2024   | 28/10/2024   |
+| Fase de Elaboración       | Diagrama de Clases                         | 4              | 29/10/2024   | 2/11/2024    |
+| Fase de Elaboración       | Documento de Arquitectura de Software      | 5              | 3/11/2024    | 7/11/2024    |
+| Fase de Construcción      | Dashboard de Análisis de Matrículas        | 5              | 8/11/2024    | 12/11/2024   |
+| Fase de Construcción      | Dashboard de Rendimiento Académico         | 5              | 13/11/2024   | 17/11/2024   |
+| Fase de Construcción      | Implementación de Filtros y Visualizaciones | 4            | 18/11/2024   | 22/11/2024   |
+| Fase de Transición        | Pruebas de Iteración Aprobadas             | 3              | 23/11/2024   | 26/11/2024   |
+| Fase de Transición        | Manual de Usuario                          | 3              | 27/11/2024   | 29/11/2024   |
+| Fase de Transición        | Informe Final del Proyecto                 | 3              | 30/11/2024   | 2/12/2024    |
+| Adquirir Tecnología       | Configuración del Servidor                 | 5              | 3/12/2024    | 7/12/2024    |
+
+---
+
+# Hitos de Entregables
+
+| Fase                | Entregable                                                                                   |
+|---------------------|---------------------------------------------------------------------------------------------|
+| Fase de Inicio      | Project Charter, Lista de Interesados, Aprobación del Plan de Proyecto, Informe de Estado del Proyecto, Plan de Cierre. |
+| Fase de Concepción  | Documento de Especificación de Requerimientos del Software, Documento Visión.               |
+| Fase de Elaboración | Casos de Uso, Diagrama de Clases, Documento de Arquitectura de Software.                    |
+| Fase de Construcción | Dashboard de Análisis de Matrículas, Dashboard de Rendimiento Académico, Funcionalidad de Exportación de Reportes, Implementación de Filtros y Visualizaciones Interactivas. |
+| Fase de Transición  | Pruebas de Iteración Aprobadas, Manual de Usuario Completo, Informe Final del Proyecto.     |
+| Adquisición de Tecnología | Licencias de Power BI, Infraestructura en la nube configurada para la plataforma.     |
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
