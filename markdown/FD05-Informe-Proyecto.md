@@ -145,3 +145,30 @@ Desarrollar una plataforma de análisis de datos de matriculados en la carrera d
 * Objetivo: Evaluar el rendimiento de los estudiantes en relación con los docentes a través de la tasa de aprobación y la probabilidad de éxito.
 * Meta: Proporcionar información valiosa sobre la efectividad docente y permitir ajustes en la asignación de cursos, buscando mejorar la experiencia académica.
 
+## 4. Marco Teórico <a id="4"></a>
+### 4.1 Análisis de Datos Académicos
+El análisis de datos académicos implica la recopilación, procesamiento y visualización de datos relacionados con el rendimiento estudiantil, matrícula y tasas de aprobación. Herramientas como Power BI permiten:
+* Identificar patrones y tendencias en datos históricos.
+* Facilitar la toma de decisiones basadas en información estadística confiable.
+* Optimizar recursos académicos mediante análisis predictivos y comparativos​.
+### 4.2 Toma de Decisiones Informadas
+El proyecto se basa en el modelo de toma de decisiones basado en datos (Data-Driven Decision Making), el cual sugiere que el uso de información clara y estructurada mejora significativamente los resultados académicos y administrativos. Este enfoque:
+* Reduce la dependencia de decisiones subjetivas o intuitivas.
+* Incrementa la eficiencia en la asignación de recursos.
+* Mejora los indicadores educativos clave como tasas de deserción y aprobación​.
+### 4.3 Visualización de Datos
+La visualización de datos es un pilar central de PAMIS. Mediante el uso de dashboards interactivos en Power BI, se permite a los usuarios explorar los datos académicos de manera intuitiva, comprendiendo métricas clave como:
+* Evolución de matrículas.
+* Desempeño por curso y docente.
+* Comparaciones entre cohortes estudiantiles. Esta metodología fomenta el análisis exploratorio y la generación de estrategias personalizadas​.
+### 4.4 Tecnología en la Educación Superior
+El uso de plataformas digitales como PAMIS en la educación superior ha demostrado:
+* Incremento en el compromiso de los estudiantes con su proceso de aprendizaje.
+* Mejora en la planificación académica mediante datos concretos.
+* Mayor transparencia y accesibilidad en la gestión de datos institucionales​.
+### 4.5 Normativas y Privacidad de Datos
+La implementación de PAMIS considera estrictamente la Ley de Protección de Datos Personales (Ley N° 29733) en Perú, garantizando:
+* La confidencialidad y seguridad de los datos académicos.
+* Cumplimiento de políticas internas de la Universidad Privada de Tacna relacionadas con el uso y almacenamiento de datos estudiantiles
+
+
