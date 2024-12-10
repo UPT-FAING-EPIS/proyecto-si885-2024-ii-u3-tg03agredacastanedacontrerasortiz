@@ -157,3 +157,68 @@ Desarrollar una plataforma de análisis de datos de matriculados en la carrera d
   PAMIS proporciona visualizaciones claras y detalladas de indicadores clave, como tasas de aprobación y áreas críticas. Esto fomenta decisiones basadas en datos, apoyando la mejora continua del rendimiento académico.
 
 <div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+- **Optimización de Recursos Educativos:**  
+  La herramienta ayuda a identificar patrones y tendencias que permiten a los administradores y docentes asignar recursos de manera eficiente, enfocándose en áreas que requieren mayor atención.
+
+- **Reducción de la Deserción Académica:**  
+  Al ofrecer un análisis detallado del progreso académico, PAMIS ayuda a los estudiantes a identificar y corregir áreas de mejora, reduciendo la probabilidad de abandono de sus estudios.
+
+- **Soporte para la Mejora Educativa:**  
+  Con información centralizada y accesible, los usuarios pueden implementar estrategias para fortalecer los resultados académicos y la calidad de la educación en la institución.
+
+---
+
+# Alcance
+
+### Inclusiones:
+
+**Desarrollo de una Aplicación en PowerBI:**
+
+- Creación de un dashboard interactivo en PowerBI que facilite la exploración visual de los datos académicos.
+- Implementación de funcionalidades que permitan a los usuarios visualizar datos de matriculación, rendimiento académico y tasas de aprobación mediante gráficos dinámicos y tablas detalladas en PowerBI.
+
+**Funcionalidades Clave:**
+
+- Análisis detallado de los datos de matrículas, rendimiento académico y otros indicadores clave dentro del entorno de PowerBI.
+- Exploración interactiva de los datos a través de visualizaciones en PowerBI para identificar patrones y tendencias que puedan guiar la toma de decisiones.
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+
+# Soporte Tecnológico
+
+- **Integración de capacidades avanzadas:**  
+  Integración de capacidades avanzadas de análisis de datos y visualización en PowerBI para un rendimiento óptimo.
+
+- **Mantenimiento y actualizaciones:**  
+  Mantenimiento y actualizaciones continuas del dashboard en PowerBI, basadas en el feedback de los usuarios y las necesidades emergentes.
+
+---
+
+# Exclusiones
+
+- **Servicios Educativos Directos:**  
+  PAMIS no proporcionará servicios educativos directos ni consultas académicas personalizadas.
+
+- **Gestión de Otros Programas Académicos:**  
+  El enfoque estará limitado a la Ingeniería de Sistemas, y no se incluirá la gestión de otros programas académicos.
+
+- **Soporte Legal o Administrativo:**  
+  La plataforma no ofrecerá asistencia legal ni soporte administrativo más allá del análisis de datos académicos.
+
+- **Soporte para Dispositivos Móviles:**  
+  PAMIS no ofrecerá soporte ni optimización para dispositivos móviles, enfocándose únicamente en entornos de escritorio a través de PowerBI.
+
+<div style="page-break-after: always; visibility: hidden">\pagebreak</div>
+# Requerimientos del Sistema
+
+## Requerimientos Funcionales
+
+| Código  | Requerimiento                            | Descripción                                                                                                                                                                 |
+|---------|------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| RF-01   | Dashboard Interactivo                    | La plataforma debe proporcionar un dashboard interactivo en Power BI que permita a los usuarios (estudiantes, docentes y administradores) acceder a estadísticas detalladas de matrícula, rendimiento académico y otros indicadores clave. |
+| RF-02   | Visualización de Estadísticas Académicas | La plataforma debe mostrar datos sobre tasas de aprobación, índices de deserción, calificaciones máximas y mínimas, y rendimiento por curso. Los usuarios deben poder visualizar estos datos mediante gráficos, tablas y reportes que faciliten la comprensión de la información. |
+| RF-03   | Análisis Comparativo                     | La plataforma debe permitir comparaciones de rendimiento académico entre diferentes cohortes de estudiantes para identificar tendencias y patrones a lo largo del tiempo. |
+| RF-04   | Identificación de Áreas Críticas         | La plataforma debe identificar y destacar los cursos o áreas académicas con altos índices de desaprobación, ayudando a la administración y a los docentes a implementar estrategias de mejora. |
+| RF-05   | Exportación de Reportes                  | La plataforma debe incluir funcionalidades para que los usuarios puedan exportar reportes en formatos PDF y Excel, permitiendo un análisis posterior fuera de la plataforma. |
+| RF-06   | Filtros y Segmentación                   | La plataforma debe permitir que los usuarios apliquen filtros y segmenten los datos en función de criterios específicos, como curso, semestre, año académico y docente. |
+| RF-07   | Generación de Recomendaciones Académicas | La plataforma debe ofrecer recomendaciones y análisis predictivos basados en datos históricos, apoyando a los estudiantes en la toma de decisiones informadas sobre su trayectoria académica. |
