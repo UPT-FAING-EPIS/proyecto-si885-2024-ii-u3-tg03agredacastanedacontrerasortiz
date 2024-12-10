@@ -89,3 +89,27 @@ graph TD
     C1 -->|Configura infraestructura| E
 
 ```
+
+- Diagrama Contextual
+```mermaid
+graph LR
+    A[Administrador / Docente] -->|Interactúa con los gráficos y análisis académicos| PAMIS
+    PAMIS -->|Provee datos académicos| B[Base de Datos]
+    PAMIS -->|Gestiona la infraestructura y recursos en Azure| C[Terraform]
+
+```
+
+- Diagrama de Actividades CU-01 “Consultar estadísticas académicas”
+```mermaid
+sequenceDiagram
+    participant Estudiante as Estudiante (Actor)
+    participant Sistema as Sistema (PAMIS)
+
+    Estudiante->>Sistema: Acceder a la plataforma PAMIS desde su navegador
+    Sistema-->>Estudiante: Muestra la pantalla principal con las secciones disponibles (Análisis de Matrículas, Desempeño Académico, etc.)
+    Estudiante->>Sistema: Selecciona una sección (por ejemplo, "Análisis de Matrículas")
+    Sistema-->>Estudiante: Carga y muestra los gráficos relacionados con las estadísticas de matrículas
+    Estudiante->>Sistema: Navega por los gráficos y observa los datos mostrados
+    Sistema-->>Estudiante: Permite la interacción con los gráficos (detalles al pasar el cursor o hacer clic)
+
+```
