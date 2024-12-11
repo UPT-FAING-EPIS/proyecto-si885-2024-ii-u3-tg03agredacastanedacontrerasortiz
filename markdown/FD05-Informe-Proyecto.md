@@ -267,26 +267,62 @@ Para la implementación de la plataforma de análisis de datos PAMIS se utilizar
 
 #### Fases de implementación
 #### 1. Fase 1: Preparación y Configuración del Entorno
-- Creación del Grupo de Recursos:
+- Creación del Grupo de Recursos: 
+   - Configuración del grupo de recursos "inteligencia-negocios" en la región East US.
+
 - Configuración del Servidor SQL:
+   - Implementación del servidor SQL "bi-segunda-unidad" con versión 12.0.
+
+   - Configuración del usuario administrador (adminsql) y contraseña.
+
 - Creación de la Base de Datos:
+   - Base de datos "CICLO_UNIVERSITARIO" con:
+      - Capacidad de almacenamiento: 32 GB.
+      - Capacidad mínima: 0.5 vCores (para ahorro en inactividad).
+      - Auto-pausa: 60 minutos.
+
 - Infraestructura de Aplicación:
+   - Creación del App Service Plan en Linux.
+   - Despliegue del servicio web "UploadCSV-unique123" con contenedor Docker.
 
 #### 2. Fase 2: Extracción, Transformación y Carga (ETL)
 - Extracción de Datos:
+   - Subida de archivos CSV a través del servicio web "UploadCSV-unique123".
+
+   - Almacenamiento en la base de datos "CICLO_UNIVERSITARIO" en Azure SQL.
+
 - Transformación de Datos:
+   - Limpieza y estructuración de datos dentro de Azure SQL mediante consultas SQL optimizadas.
 
 #### 3. Fase 3: Visualización y Desarrollo de Dashboards
 - Conexión de Power BI:
+   - Configuración de la conexión entre Power BI y la base de datos Azure SQL.
+
 - Desarrollo de Dashboards:
+   - Creación de visualizaciones interactivas:
+      - Tasas de matriculación: Evolución de inscripciones en el tiempo.
+      - Rendimiento académico: Análisis por curso, cohorte y docente.
+      - Áreas críticas: Identificación de cursos con alta tasa de desaprobación.
+
+   - Implementación de fórmulas DAX para cálculos personalizados.
+
+   - Optimización del modelo de datos para asegurar rendimiento en los reportes.
+
 
 #### 4. Fase 4: Pruebas y Validación
 - Pruebas de Funcionalidad:
+   - Validación del flujo de datos desde el servicio UploadCSV hasta la base de datos y Power BI.
+
 - Pruebas de Rendimiento:
+   - Optimización de consultas SQL y validación de tiempos de respuesta.
 
 #### 5. Fase 5: Despliegue y Monitoreo
 - Publicación del Dashboard en Power BI Service:
+   - Configuración de accesos y permisos a usuarios finales.
+
 - Monitoreo del Desempeño:
+   - Uso de herramientas de Azure para monitorear la base de datos y la aplicación.
+   - Mantenimiento periódico y ajustes de optimización en Power BI.
 
 ### Cronograma
 ![cronograma](../media/cronograma.PNG)
