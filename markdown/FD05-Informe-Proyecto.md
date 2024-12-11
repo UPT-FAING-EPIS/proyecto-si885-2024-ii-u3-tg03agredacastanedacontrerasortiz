@@ -267,10 +267,26 @@ Para la implementación de la plataforma de análisis de datos PAMIS se utilizar
 
 #### Fases de implementación
 #### 1. Fase 1: Preparación y Configuración del Entorno
+- Creación del Grupo de Recursos:
+- Configuración del Servidor SQL:
+- Creación de la Base de Datos:
+- Infraestructura de Aplicación:
+
 #### 2. Fase 2: Extracción, Transformación y Carga (ETL)
+- Extracción de Datos:
+- Transformación de Datos:
+
 #### 3. Fase 3: Visualización y Desarrollo de Dashboards
+- Conexión de Power BI:
+- Desarrollo de Dashboards:
+
 #### 4. Fase 4: Pruebas y Validación
+- Pruebas de Funcionalidad:
+- Pruebas de Rendimiento:
+
 #### 5. Fase 5: Despliegue y Monitoreo
+- Publicación del Dashboard en Power BI Service:
+- Monitoreo del Desempeño:
 
 ### Cronograma
 ![cronograma](../media/cronograma.PNG)
