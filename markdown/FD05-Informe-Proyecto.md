@@ -277,3 +277,16 @@ Para la implementación de la plataforma de análisis de datos PAMIS se utilizar
 
 ### Presupuesto
 ![presupuesto](../media/presupuesto.PNG)
+
+### Conclusiones
+- Optimización en la Toma de Decisiones Académicas La implementación de PAMIS permite a estudiantes, docentes y administradores acceder a datos detallados sobre matrículas y rendimiento académico. Esto facilita la toma de decisiones informadas, mejorando la planificación y el desempeño estudiantil.
+
+- Centralización de la Información PAMIS centraliza datos críticos en un solo sistema, eliminando la dependencia de procesos manuales y descentralizados. Esto reduce la carga administrativa y garantiza una mayor eficiencia en la gestión académica.
+
+- Impacto en el Rendimiento Estudiantil Al proporcionar acceso a estadísticas detalladas y personalizadas, la plataforma fomenta la identificación de áreas de mejora, motivando a los estudiantes a optimizar su desempeño académico y reduciendo índices de deserción.
+
+- Cumplimiento Legal y Seguridad de Datos PAMIS cumple con las normativas de protección de datos establecidas en la Ley N° 29733, garantizando la seguridad y confidencialidad de la información académica y personal de los usuarios.
+
+- Escalabilidad y Adaptabilidad del Sistema El diseño modular y el uso de tecnologías modernas como Azure y Power BI aseguran la escalabilidad del sistema, permitiendo la incorporación de nuevas funcionalidades según las necesidades futuras de la institución.
+
+- Contribución al Mejoramiento Educativo PAMIS apoya la mejora continua de los programas académicos, ofreciendo datos estratégicos que permiten a la institución implementar cambios efectivos en los planes de estudio y metodologías de enseñanza.
