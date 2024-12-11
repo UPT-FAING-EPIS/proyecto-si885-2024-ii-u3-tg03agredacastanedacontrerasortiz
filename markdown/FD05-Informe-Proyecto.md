@@ -260,7 +260,20 @@ Los pipelines de CI/CD en Azure DevOps integran los artefactos generados, como s
 Desde una perspectiva ambiental, el proyecto PAMIS tendrá un impacto mínimo en el medio ambiente, ya que se trata de una solución digital que no requiere de infraestructura física adicional. El proyecto contribuirá al compromiso de la UPT con la sostenibilidad al minimizar el uso de papel y otros recursos físicos, promoviendo la digitalización y el acceso en línea a la información académica.
 
 ### b. Tecnología de Desarrollo 
-![tecnologia-desarrollo](../media/TecnoDesarrollo.png)
+![tecnologia-desarrollo](../media/TecnoDesarrollo.PNG)
 
 ### c. Metodología de Implementación
 Para la implementación de la plataforma de análisis de datos PAMIS se utilizará la metodología ágil Scrum, que permite un desarrollo iterativo, incremental y colaborativo. Facilitando la adaptación a los requerimientos del cliente y la entrega de productos funcionales en ciclos cortos.
+
+#### Fases de implementación
+#### 1. Fase 1: Preparación y Configuración del Entorno
+#### 2. Fase 2: Extracción, Transformación y Carga (ETL)
+#### 3. Fase 3: Visualización y Desarrollo de Dashboards
+#### 4. Fase 4: Pruebas y Validación
+#### 5. Fase 5: Despliegue y Monitoreo
+
+### Cronograma
+![cronograma](../media/cronograma.PNG)
+
+### Presupuesto
+![presupuesto](../media/presupuesto.PNG)
