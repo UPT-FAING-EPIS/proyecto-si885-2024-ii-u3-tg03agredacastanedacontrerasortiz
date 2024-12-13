@@ -34,6 +34,10 @@ El propósito de PAMIS es proporcionar una plataforma tecnológica que permita a
 
 -  [Consolidado Semestre 2022 - II](https://docs.google.com/spreadsheets/d/10kJhI5DXXkWpJ0_mLp-LQxszpHnUWk9N/edit?usp=sharing&ouid=105683032286356296046&rtpof=true&sd=true)
 
+-  [Link del reporte en PowerBI](https://app.powerbi.com/reportEmbed?reportId=0d97ad35-6197-41f4-8ff7-8956d59f99c0&autoAuth=true&ctid=b6b466ee-468d-4011-b9fc-fbdcf82ac90a)
+
+## Diagramas Mermaid
+
 - Diagrama de clase
 
 ```mermaid
@@ -179,20 +183,6 @@ sequenceDiagram
     Sistema-->>Sistema: Procesa la exportación y genera el archivo
     Sistema-->>Estudiante: Descarga el archivo al dispositivo del estudiante
 
-```
--Diagrama de Casos de Uso de la Plataforma en PowerBi
-```mermaid
-usecaseDiagram
-actor Estudiante as "Estudiante"
-rectangle PAMIS {
-usecase ExportarReportes as "Exportar reportes"
-usecase AplicarFiltros as "Aplicar filtros a los gráficos"
-usecase ConsultarEstadisticas as "Consultar estadísticas académicas"
-}
-
-Estudiante --> ExportarReportes
-Estudiante --> AplicarFiltros
-Estudiante --> ConsultarEstadisticas
 ```
 
 -Diagrama de componentes
